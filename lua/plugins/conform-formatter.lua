@@ -7,6 +7,7 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "golines", "gofumpt", "goimports" },
 				javascript = { "prettierd" },
+        cpp = { "clang-format" }
 			},
 		})
 

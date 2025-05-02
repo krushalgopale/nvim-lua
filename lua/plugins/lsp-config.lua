@@ -41,6 +41,9 @@ return {
       lspconfig.tailwindcss.setup({
         capabilities = capabilities,
       })
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
 
       vim.diagnostic.config({
         virtual_text = {

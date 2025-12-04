@@ -1,4 +1,35 @@
 return {
+    -- Mason setup
+  {
+    "williamboman/mason.nvim",
+    lazy = false,
+    config = function()
+      require("mason").setup()
+    end,
+  },
+
+  -- Auto install tools via Mason
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    lazy = false,
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "stylua",       
+          "prettierd",    
+          "clang-format", 
+          "gofmt", 
+          "golines", 
+          "gofumpt", 
+          "goimports",
+        },
+        auto_update = true,
+        run_on_start = true,
+      })
+    end,
+  },
+
+  -- Conform Setup
 	"stevearc/conform.nvim",
 	config = function()
 		require("conform").setup({
